@@ -24,8 +24,9 @@ public class CanchaController {
 
     @PostMapping
     public Cancha crearCancha(@RequestBody Cancha cancha) {
-        
-
-}
+        cancha.setId((long) canchas.size() + 1);
+        canchas.add(cancha);
+        return cancha;
+    }
 
 }
